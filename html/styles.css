@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite|Fredericka the Great|Whisper');
+
+::-webkit-scrollbar {
+    background-color: rgba(23, 23, 23, 0);
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-image: url("old_arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-image: url("circle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10px;
+}
+
+body {
+    --message-font-size: 24px;
+    --list-font-size: 18px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.letter-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 640px;
+    height: 427px;
+    background-image: url("old_paper_folded_3.png");
+    color: rgba(23, 23, 23, 1);
+}
+
+.letter-box {
+    display: flex;
+    flex-direction: column;
+    height: 386px;
+    margin: 20px;
+    border: 2px solid rgba(23, 23, 23, 0.7);
+}
+
+.letter-box:before {
+    height: 380px;
+    margin: 20px;
+    border: 1px solid rgba(23, 23, 23, 0.7);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+}
+
+hr {
+    width: 300px;
+    margin: 0 auto;
+    border-top: 1px solid;
+}
+
+.letter-message {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 30px;
+    height: 100%;
+    width: auto;
+}
+
+.letter-message-content {
+    /*display: none;*/
+    margin: 20px auto !important;
+    /*text-transform: uppercase;*/
+}
+
+.letter-message-signature {
+    margin-top: auto;
+    text-align: right;
+    font-family: 'Whisper', cursive;
+}
+
+/* Recipe Related */
+
+.letter-recipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+    height: 100%;
+    width: auto;
+}
+
+.recipe-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.recipe-list-container {
+    /*align-items: flex-end;*/
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    align-content: stretch;
+    margin: 0 100px 30px 60px;
+    padding-bottom: 10px;
+    width: auto;
+    height: 100%;
+    font-family: 'Special Elite', cursive !important;
+    text-transform: none !important;
+    font-size: 18px;
+    scrollbar-width: thin;
+}
+
+ul.recipe {
+    list-style:disc inside;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    height: calc(var(--list-font-size)*1.5*5 + 2px); /* Hauteur = Taille de police * Hauteur de ligne * Nombre de ligne */
+}
+
+
+
+ul.recipe > li {
+    text-indent: -5px;
+}
+
+.letter-recipe-content {
+    display: block;
+    text-align: start;
+}
+
+
+/*others*/
+p, div, a {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: var(--message-font-size);
+    line-height: 150%;
+    color: inherit;
+    user-select: none;
+}
+
+li a {
+    display: block;
+    font-family: 'Special Elite', cursive;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    user-select: none;
+}
